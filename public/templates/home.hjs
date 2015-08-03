@@ -1,0 +1,9 @@
+<div class="row">
+	<div class="col-md-8 col-xs-12 col-sm-12 col-lg-8 col-md-offset-2 col-xs-offset-0 col-lg-offset-2">
+		<h4>Forecast by city</h4>
+		<md-chips ng-model="cities" placeholder="Enter other city name"
+        secondary-placeholder="Enter a city name first">
+     	</md-chips>
+		<md-button ui-sref="forecast" class="md-raised md-primary">Get Forecast</md-button>
+	</div>
+</div>

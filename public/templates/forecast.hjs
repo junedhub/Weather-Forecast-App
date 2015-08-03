@@ -1,0 +1,22 @@
+<p><a ui-sref='home'>Back to Search</a></p>
+<div ng-repeat='forecasts in weatherForecasts'>
+	<div class='col-md-3 col-xs-2 col-lg-4 col-sm-4'>
+		<h3>Weather Forecast for {{forecasts.city.name}}</h3>
+		<div ng-repeat='forecast in forecasts.list'>
+			<div class='row'>
+				<div class='col-md-offset-0 col-xs-offset-0 col-lg-offset-0 col-sm-offset-0'>
+					<accordion close-others="true">
+    					<accordion-group>
+    					    <accordion-heading>
+            					{{forecast.dt * 1000 | date: 'MMM d, yyyy'}} Forecast: <span ng-repeat='weather in forecast.weather'><b>{{weather.description}}</b> <img src="http://openweathermap.org/img/w/{{weather.icon}}.png" width='30px' height='25px'></span> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        					</accordion-heading>
+        					<p ng-repeat='weather in forecast.weather'>Today: <b>{{weather.description}}</b> <span><img src="http://openweathermap.org/img/w/{{weather.icon}}.png" height="30px"></span> with <b>Humidity</b>, {{forecast.humidity}} %</p>
+      						<p>Day Temperature: <b>{{convertToCelsius(forecast.temp.day)}}&degC</b></p>
+      						<p>Night Temperature: <b>{{convertToCelsius(forecast.temp.night)}}&degC</b></p>
+    					</accordion-group>
+     				</accordion>
+				</div>
+			</div>
+		</div>	
+	<div>
+</div>
