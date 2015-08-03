@@ -11,6 +11,5 @@ angular.module('weatherApp')
 	}
 	$scope.convertToCelsius = function(degK){
 		return Math.round(degK - 273.15);
-	};
-	console.info($scope.weatherForecasts);	
+	};	
 }]);
