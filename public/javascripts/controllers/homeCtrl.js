@@ -9,7 +9,7 @@ angular.module('weatherApp')
 			$state.go('forecast');
 		}else{
 			notify({
-            	message: 'Error! Field cant be blank',
+            	message: 'Error! Field cant be left blank',
             	classes: 'alert-danger',
             	position: 'center',
             	duration: 3000
