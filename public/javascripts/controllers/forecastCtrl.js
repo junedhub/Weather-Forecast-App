@@ -1,5 +1,5 @@
 angular.module('weatherApp')
-.controller('forecastCtrl',['$scope','weatherAPI','$state', 'cityService',function($scope,weatherAPI,$state,cityService){
+.controller('forecastCtrl',['$scope','weatherAPI', 'cityService',function($scope,weatherAPI,cityService){
 	$scope.weatherForecasts = [];
 	$scope.cities = cityService;
 	for(var i = 0;  i < $scope.cities.length; i++)
